@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.348cd507.css",
-    "main.js": "/static/js/main.7d3f21c0.js",
+    "main.js": "/static/js/main.b0d3b2f1.js",
     "static/media/Satyam_Kumar_Resume.pdf": "/static/media/Satyam_Kumar_Resume.18ff0402844a5a65dd2d.pdf",
     "static/media/mentimeterImage.png": "/static/media/mentimeterImage.4189bdf7caffe23293db.png",
     "index.html": "/index.html",
     "main.348cd507.css.map": "/static/css/main.348cd507.css.map",
-    "main.7d3f21c0.js.map": "/static/js/main.7d3f21c0.js.map"
+    "main.b0d3b2f1.js.map": "/static/js/main.b0d3b2f1.js.map"
   },
   "entrypoints": [
     "static/css/main.348cd507.css",
-    "static/js/main.7d3f21c0.js"
+    "static/js/main.b0d3b2f1.js"
   ]
 }

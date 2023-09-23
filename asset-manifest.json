@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.e6fd0974.css",
-    "main.js": "/static/js/main.b783f1b0.js",
+    "main.js": "/static/js/main.fc043b37.js",
     "static/media/jawellane.png": "/static/media/jawellane.674315a6e1fff9647b6e.png",
     "static/media/limeroad.png": "/static/media/limeroad.8243f38c91ee1b0ae35d.png",
     "static/media/Satyam_Kumar_Resume.pdf": "/static/media/Satyam_Kumar_Resume.92f909f2daf4374184cf.pdf",
     "static/media/mini.png": "/static/media/mini.c5c8fea213ae5c3e51f4.png",
     "index.html": "/index.html",
     "main.e6fd0974.css.map": "/static/css/main.e6fd0974.css.map",
-    "main.b783f1b0.js.map": "/static/js/main.b783f1b0.js.map"
+    "main.fc043b37.js.map": "/static/js/main.fc043b37.js.map"
   },
   "entrypoints": [
     "static/css/main.e6fd0974.css",
-    "static/js/main.b783f1b0.js"
+    "static/js/main.fc043b37.js"
   ]
 }

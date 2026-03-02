@@ -1,25 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider, useTheme } from "./context/Themecontext";
+import useGlobalStyles from "./hooks/useGlobalStyles";
+import useScrollSpy from "./hooks/useScrollSpy";
 
-function App() {
+import Navbar   from "./components/Navbar";
+import Hero     from "./components/Hero";
+import Skills   from "./components/Skills";
+import Projects from "./components/Projects";
+import Journey  from "./components/Journey";
+import Contact  from "./components/Contact";
+import Footer   from "./components/Footer";
+
+const SECTIONS = ["about", "skills", "projects", "experience", "contact"];
+
+const PortfolioLayout = () => {
+  const { t } = useTheme();
+  const { activeSection, visibleSections, setRef, scrollToSection } = useScrollSpy(SECTIONS);
+
+  useGlobalStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ background: t.bg, color: t.text, minHeight: "100vh", transition: "background .4s ease, color .4s ease" }}>
+      <Navbar
+        activeSection={activeSection}
+        scrollToSection={scrollToSection}
+      />
+
+      <main>
+        <Hero
+          sectionRef={setRef("about")}
+          scrollToSection={scrollToSection}
+        />
+
+        <Skills
+          sectionRef={setRef("skills")}
+          isVisible={visibleSections["skills"]}
+        />
+
+        <Projects
+          sectionRef={setRef("projects")}
+          isVisible={visibleSections["projects"]}
+        />
+
+        <Journey
+          sectionRef={setRef("journey")}
+          isVisible={visibleSections["journey"]}
+        />
+
+        <Contact
+          sectionRef={setRef("contact")}
+          isVisible={visibleSections["contact"]}
+        />
+      </main>
+
+      <Footer />
     </div>
   );
-}
+};
+
+const App = () => (
+  <ThemeProvider>
+    <PortfolioLayout />
+  </ThemeProvider>
+);
 
 export default App;
